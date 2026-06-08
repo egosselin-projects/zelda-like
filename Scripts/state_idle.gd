@@ -9,6 +9,7 @@ func _ready() -> void:
 
 # Entrée dans l'état
 func enter_state() -> void:
+	print("entrée état idle")
 	player.update_animation("idle")
 	pass
 
