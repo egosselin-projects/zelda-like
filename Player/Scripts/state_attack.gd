@@ -2,6 +2,7 @@ class_name State_Attack extends State
 
 @onready var walk: State = $"../Walk"
 @onready var idle: State = $"../Idle"
+@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
 
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 @onready var animation_player_attack: AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AnimationPlayer"
@@ -29,6 +30,10 @@ func enter_state() -> void:
 	audio.play()
 
 	attacking = true
+
+	# Délai court pour ne pas détruire l'objet immédiatement
+	await get_tree().create_timer(0.075).timeout
+	hurt_box.monitoring = true
 	pass
 
 
@@ -36,6 +41,7 @@ func enter_state() -> void:
 func exit_state() -> void:
 	animation_player.animation_finished.disconnect(end_attack)
 	attacking = false
+	hurt_box.monitoring = false
 	pass
 
 
