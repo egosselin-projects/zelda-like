@@ -2,7 +2,7 @@ class_name State_Attack extends State
 
 @onready var walk: State = $"../Walk"
 @onready var idle: State = $"../Idle"
-@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
+@onready var hurt_box: HurtBox = %AttackHurtBox
 
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 @onready var animation_player_attack: AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AnimationPlayer"
