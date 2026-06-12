@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://rkccxm12chjd" path="res://Tilemaps/grass_01.tscn" id="1_wt17y"]
 [ext_resource type="PackedScene" uid="uid://gtg818ssb053" path="res://Player/player.tscn" id="2_m8u5f"]
 [ext_resource type="PackedScene" uid="uid://c67cdu4vtjg2n" path="res://Props/Plants/Plant.tscn" id="3_m8u5f"]
+[ext_resource type="PackedScene" uid="uid://ch60g84mkc7gh" path="res://Enemies/Slime/slime.tscn" id="4_is3ju"]
 
 [node name="Playground" type="Node2D" unique_id=187869741]
 y_sort_enabled = true
@@ -28,3 +29,12 @@ position = Vector2(291, 238)
 
 [node name="Plant5" parent="." unique_id=1443817678 instance=ExtResource("3_m8u5f")]
 position = Vector2(89, 231)
+
+[node name="Slime" parent="." unique_id=1842516019 instance=ExtResource("4_is3ju")]
+position = Vector2(92, 176)
+
+[node name="Slime2" parent="." unique_id=2079059581 instance=ExtResource("4_is3ju")]
+position = Vector2(446, 279)
+
+[node name="Slime3" parent="." unique_id=841214142 instance=ExtResource("4_is3ju")]
+position = Vector2(207, 49)
