@@ -1,8 +1,8 @@
 class_name Enemy extends CharacterBody2D
 
 signal direction_changed(new_direction: Vector2)
-signal enemy_damaged()
-signal enemy_destroy()
+signal enemy_damaged(hurt_box: HurtBox)
+signal enemy_destroy(hurt_box: HurtBox)
 
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 
@@ -70,14 +70,17 @@ func animation_direction() -> String:
 	else:
 		return "side"
 
-func _take_damage(damage: int) -> void:
+func _take_damage(hurt_box: HurtBox) -> void:
 	if invulnerable == true:
 		return
 
-	hp -= damage
+	# Mise à jour des points de vie
+	hp -= hurt_box.damage
+
+	print("HP", hp)
 
 	if hp > 0:
-		enemy_damaged.emit()
+		enemy_damaged.emit(hurt_box)
 	else:
-		enemy_destroy.emit()
+		enemy_destroy.emit(hurt_box)
 	

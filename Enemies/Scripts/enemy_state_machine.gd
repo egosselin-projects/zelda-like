@@ -44,7 +44,7 @@ func change_state(new_state : EnemyState) -> void:
 	if new_state == null || new_state == current_state:
 		return
 		
-	print("Slime, changement état " + new_state.name)
+	#print("Slime, changement état " + new_state.name)
 	
 	# Au changement d'état on sort de l'état précédent
 	if current_state:
