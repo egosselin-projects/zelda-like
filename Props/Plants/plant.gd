@@ -7,6 +7,6 @@ func _ready() -> void:
 	pass # Replace with function body.
  
 # Underscore pour param optionnel
-func take_damage(_damage: int) -> void:
+func take_damage(_damage: HurtBox) -> void:
 	queue_free()
 	pass
