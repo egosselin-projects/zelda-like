@@ -94,7 +94,6 @@ offset_top = 149.0
 offset_right = 199.0
 offset_bottom = 199.0
 theme_override_font_sizes/font_size = 10
-text = "Texte description avec un texte super long"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -121,3 +120,6 @@ text = "Sauvegarder"
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 text = "Charger"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control" unique_id=1036682530]
+max_polyphony = 4
