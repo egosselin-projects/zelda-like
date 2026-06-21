@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://y22bcg5lnkol"]
+
+[ext_resource type="Script" uid="uid://xd0y0lfwo5f6" path="res://Items/scripts/item_data.gd" id="1_mndqm"]
+[ext_resource type="Texture2D" uid="uid://cl5jx4axt8lb1" path="res://Items/sprites/items.png" id="2_6sq6v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vqjr"]
+atlas = ExtResource("2_6sq6v")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_mndqm")
+name = "Pierre"
+description = "Qui n'aime pas collectionner des cailloux ?"
+texture = SubResource("AtlasTexture_5vqjr")
+metadata/_custom_type_script = "uid://xd0y0lfwo5f6"
