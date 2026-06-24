@@ -4,21 +4,21 @@
 [ext_resource type="PackedScene" uid="uid://rkccxm12chjd" path="res://Tilemaps/grass_01.tscn" id="1_vbl6q"]
 [ext_resource type="PackedScene" uid="uid://bo4t5bq4rpqyo" path="res://Levels/player_spawn.tscn" id="2_chooo"]
 [ext_resource type="PackedScene" uid="uid://digm86jdm4u7f" path="res://Levels/level_transition.tscn" id="4_4t7i1"]
-[ext_resource type="PackedScene" uid="uid://ch1x2ypry8pof" path="res://Items/item_pickup/item_pickup.tscn" id="5_pwydo"]
-[ext_resource type="Resource" uid="uid://b4y6nct3hliab" path="res://Items/gem.tres" id="6_8itkk"]
-[ext_resource type="Resource" uid="uid://y22bcg5lnkol" path="res://Items/stone.tres" id="7_th3kk"]
-[ext_resource type="Resource" uid="uid://cbx6f7pglnj8d" path="res://Items/potion.tres" id="8_b60gt"]
-[ext_resource type="Resource" uid="uid://dkxbgxwxth3ml" path="res://Items/apple.tres" id="9_b60gt"]
+[ext_resource type="PackedScene" uid="uid://coua3p4seoykx" path="res://Interactables/TreasureChest/treasure_chest.tscn" id="5_pwydo"]
+[ext_resource type="Resource" uid="uid://cbx6f7pglnj8d" path="res://Items/potion.tres" id="6_8itkk"]
+[ext_resource type="Resource" uid="uid://b4y6nct3hliab" path="res://Items/gem.tres" id="7_th3kk"]
+[ext_resource type="Resource" uid="uid://y22bcg5lnkol" path="res://Items/stone.tres" id="7_xhij5"]
 
 [node name="01" type="Node2D" unique_id=323601260]
 script = ExtResource("1_22ele")
+metadata/_edit_horizontal_guides_ = [106.0]
 
 [node name="Grass01" parent="." unique_id=1335966116 instance=ExtResource("1_vbl6q")]
 position = Vector2(-1, 0)
 tile_map_data = PackedByteArray("AAAAAAAAAQAOAAUAAAAAAAEAAQAOAAUAAAAAAAIAAQAOAAUAAAAAAAMAAQAOAAUAAAAAAAQAAQAOAAUAAAAAAAUAAQAOAAUAAAAAAAYAAQAOAAUAAAAAAAcAAQAOAAUAAAAAAAgAAQAOAAUAAAABAAAAAQAKAAYAAAABAAEAAQAKAAcAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAABAAQAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAKAAQAAAACAAAAAQALAAYAAAACAAEAAQALAAcAAAACAAIAAQABAAMAAAACAAMAAQABAAEAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAACAAYAAQAAAAQAAAACAAcAAQAAAAAAAAACAAgAAQALAAQAAAADAAAAAQAMAAYAAAADAAEAAQAMAAcAAAADAAIAAQABAAMAAAADAAMAAQABAAMAAAADAAQAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQALAAQAAAAEAAAAAQANAAYAAAAEAAEAAQANAAcAAAAEAAIAAQABAAMAAAAEAAMAAQABAAMAAAAEAAQAAQABAAEAAAAEAAUAAQAAAAAAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQALAAQAAAAFAAAAAQALAAYAAAAFAAEAAQALAAcAAAAFAAIAAQABAAMAAAAFAAMAAQABAAMAAAAFAAQAAQAAAAAAAAAFAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAAFAAcAAQAAAAAAAAAFAAgAAQALAAQAAAAGAAAAAQAMAAYAAAAGAAEAAQAMAAcAAAAGAAIAAQAAAAQAAAAGAAMAAQABAAMAAAAGAAQAAQACAAEAAAAGAAUAAQAAAAAAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAAAAAAGAAgAAQAOAAQAAAAHAAAAAQANAAYAAAAHAAEAAQANAAcAAAAHAAIAAQABAAMAAAAHAAMAAQAAAAQAAAAHAAQAAQAAAAAAAAAHAAUAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAcAAQAAAAAAAAAHAAgAAQAAAAAAAAAIAAAAAQALAAYAAAAIAAEAAQALAAcAAAAIAAIAAQABAAMAAAAIAAMAAQABAAMAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAQAAAAIAAYAAQAAAAAAAAAIAAcAAQAAAAAAAAAIAAgAAQAAAAAAAAAJAAAAAQAMAAYAAAAJAAEAAQAMAAcAAAAJAAIAAQABAAMAAAAJAAMAAQABAAMAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAAAAAAJAAgAAQAKAAQAAAAKAAAAAQANAAYAAAAKAAEAAQANAAcAAAAKAAIAAQABAAMAAAAKAAMAAQABAAMAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAAAAAAKAAgAAQALAAQAAAALAAAAAQALAAYAAAALAAEAAQALAAcAAAALAAIAAQAAAAQAAAALAAMAAQABAAMAAAALAAQAAQAAAAAAAAALAAUAAQACAAEAAAALAAYAAQAAAAAAAAALAAcAAQAAAAAAAAALAAgAAQALAAQAAAAMAAAAAQAMAAYAAAAMAAEAAQAMAAcAAAAMAAIAAQABAAMAAAAMAAMAAQABAAMAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAAAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAAAAAAMAAgAAQAOAAQAAAANAAAAAQAOAAYAAAANAAIAAQABAAMAAAANAAMAAQABAAMAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAKAAQAAAANAAgAAQAKAAUAAAAOAAAAAQAKAAUAAAAOAAEAAQAKAAUAAAAOAAIAAQAKAAUAAAAOAAMAAQAKAAcAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAYAAQAAAAQAAAAOAAcAAQAMAAQAAAAOAAgAAQAAAAQAAAANAAEAAQAOAAcAAAA=")
 
 [node name="PlayerSpawn" parent="." unique_id=1551657958 instance=ExtResource("2_chooo")]
-position = Vector2(323, 126)
+position = Vector2(255, 250)
 
 [node name="LevelTransition" parent="." unique_id=707893486 instance=ExtResource("4_4t7i1")]
 position = Vector2(256, 288)
@@ -31,18 +31,17 @@ level = "uid://brw6a714vb8fu"
 size = 3
 side = 1
 
-[node name="ItemPickup" parent="." unique_id=843540024 instance=ExtResource("5_pwydo")]
-position = Vector2(103, 117)
+[node name="TreasureChest" parent="." unique_id=342463736 instance=ExtResource("5_pwydo")]
+position = Vector2(80, 125)
 item_data = ExtResource("6_8itkk")
+quantity = 2
 
-[node name="ItemPickup2" parent="." unique_id=1825239928 instance=ExtResource("5_pwydo")]
-position = Vector2(103, 170)
+[node name="TreasureChest2" parent="." unique_id=1242685045 instance=ExtResource("5_pwydo")]
+position = Vector2(150, 125)
 item_data = ExtResource("7_th3kk")
+quantity = 10
 
-[node name="ItemPickup3" parent="." unique_id=1224132258 instance=ExtResource("5_pwydo")]
-position = Vector2(103, 226)
-item_data = ExtResource("8_b60gt")
-
-[node name="ItemPickup4" parent="." unique_id=1351159697 instance=ExtResource("5_pwydo")]
-position = Vector2(377, 229)
-item_data = ExtResource("9_b60gt")
+[node name="TreasureChest3" parent="." unique_id=1784017186 instance=ExtResource("5_pwydo")]
+position = Vector2(225, 125)
+item_data = ExtResource("7_xhij5")
+quantity = 50
