@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cb1lo2ajgtvme" path="res://Interactables/TreasureChest/treasure-chest.png" id="2_1wiyq"]
 [ext_resource type="Texture2D" uid="uid://cl5jx4axt8lb1" path="res://Items/sprites/items.png" id="3_avjv6"]
 [ext_resource type="AudioStream" uid="uid://fsyku21dcd68" path="res://Interactables/TreasureChest/treasure-open.wav" id="4_km1n8"]
+[ext_resource type="PackedScene" uid="uid://h4im2yx0kj5k" path="res://GeneralNodes/PersistantDataHandler/persistant_data_handler.tscn" id="5_dhxp7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qpp62"]
 atlas = ExtResource("3_avjv6")
@@ -196,6 +197,7 @@ size = Vector2(32, 10)
 size = Vector2(36, 16)
 
 [node name="TreasureChest" type="Node2D" unique_id=342463736]
+process_mode = 3
 script = ExtResource("1_j544f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1629478594]
@@ -215,7 +217,6 @@ offset_bottom = 9.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 10
-text = "x99"
 vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=916426339]
@@ -241,3 +242,5 @@ monitorable = false
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_jbh2q")
 debug_color = Color(0, 0.70196074, 0.20391117, 0.41960785)
+
+[node name="IsOpen" parent="." unique_id=1717147474 instance=ExtResource("5_dhxp7")]

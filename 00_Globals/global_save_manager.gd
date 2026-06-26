@@ -14,7 +14,7 @@ var current_save: Dictionary = {
 		pos_y = 0
 	},
 	items = [],
-	persistance = [],
+	persistence = [],
 	quests = [],
 }
 
@@ -62,6 +62,7 @@ func update_player_data() -> void:
 	current_save.player.pos_x = player.global_position.x
 	current_save.player.pos_y = player.global_position.y
 
+
 func update_scene_path() -> void:
 	var path: String = ""
 
@@ -74,3 +75,14 @@ func update_scene_path() -> void:
 
 func update_item_data() -> void:
 	current_save.items = PlayerManager.INVENTORY_DATA.get_save_data()
+
+
+# Ajout de données a persister dans la sauvegarde
+func add_persistent_value(value: String) -> void:
+	if check_persistent_value(value) == false:
+		current_save.persistence.append(value)
+
+
+func check_persistent_value(value: String) -> bool:
+	var persist = current_save.persistence as Array
+	return persist.has(value)
