@@ -7,7 +7,7 @@ var player: Player
 var player_spawned: bool = false
 
 #Ce signal est destiné a être déclenché depuis les états de la state_machine
-#signal interact_pressed
+signal interact_pressed
 
 func _ready() -> void:
 	add_player_instance()
