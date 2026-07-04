@@ -65,7 +65,7 @@ func _on_player_enter() -> void:
 	_can_see_player = true
 	
 	# Un enemi dans l'état assomé ne doit pas changer immédiatement d'état
-	if state_machine.current_state is EnemyStateStun:
+	if state_machine.current_state is EnemyStateStun or state_machine.current_state is EnemyStateDestroy:
 		return
 	
 	state_machine.change_state(self)

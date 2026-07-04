@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dhhqx3w7poxw1"]
+
+[ext_resource type="Script" uid="uid://cnty2jl1ebknq" path="res://Player/Scripts/abilities/boomerang.gd" id="1_7jyai"]
+[ext_resource type="Texture2D" uid="uid://cnyjf386aghbi" path="res://Player/Sprites/boomerang.png" id="2_q1tu1"]
+[ext_resource type="PackedScene" uid="uid://mhvrejij4j1q" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="3_j6qed"]
+
+[sub_resource type="Animation" id="Animation_q1tu1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_j6qed"]
+resource_name = "boomerang"
+length = 0.3
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0375, 0.075, 0.112500004, 0.15, 0.1875, 0.22500001, 0.2625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5u3cr"]
+_data = {
+&"RESET": SubResource("Animation_q1tu1"),
+&"boomerang": SubResource("Animation_j6qed")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qpp62"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5u3cr"]
+radius = 13.0
+
+[node name="Boomerang" type="Node2D" unique_id=1474758783]
+script = ExtResource("1_7jyai")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=987123641]
+position = Vector2(0, -16)
+texture = ExtResource("2_q1tu1")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1383521831]
+libraries/ = SubResource("AnimationLibrary_5u3cr")
+autoplay = &"boomerang"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1402802679]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=228071692]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_qpp62")
+
+[node name="HurtBox" parent="." unique_id=1203702136 instance=ExtResource("3_j6qed")]
+collision_mask = 256
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox" unique_id=1210608201]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_5u3cr")
+debug_color = Color(1, 0, 0.22492886, 0.41960785)
