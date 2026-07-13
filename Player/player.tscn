@@ -672,7 +672,7 @@ script = ExtResource("11_5htga")
 [node name="Audio" type="Node" parent="." unique_id=802949652]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio" unique_id=2009977978]
-max_polyphony = 4
+max_polyphony = 6
 
 [node name="Interactions" type="Node2D" parent="." unique_id=92690452]
 script = ExtResource("10_apopc")
