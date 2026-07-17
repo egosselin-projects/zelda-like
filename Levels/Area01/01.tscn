@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ur55jv2wbkl1" path="res://Levels/scripts/level.gd" id="1_22ele"]
 [ext_resource type="PackedScene" uid="uid://rkccxm12chjd" path="res://Tilemaps/grass_01.tscn" id="1_vbl6q"]
+[ext_resource type="AudioStream" uid="uid://bdkbqr2aj6uq5" path="res://Levels/music/example_music_01.ogg" id="2_8itkk"]
 [ext_resource type="PackedScene" uid="uid://bo4t5bq4rpqyo" path="res://Levels/player_spawn.tscn" id="2_chooo"]
 [ext_resource type="PackedScene" uid="uid://digm86jdm4u7f" path="res://Levels/level_transition.tscn" id="4_4t7i1"]
 [ext_resource type="PackedScene" uid="uid://cgc0hevmyhivb" path="res://Enemies/Goblin/goblin.tscn" id="5_pwydo"]
 
 [node name="01" type="Node2D" unique_id=323601260]
 script = ExtResource("1_22ele")
+music = ExtResource("2_8itkk")
 metadata/_edit_horizontal_guides_ = [106.0]
 
 [node name="Grass01" parent="." unique_id=1335966116 instance=ExtResource("1_vbl6q")]
@@ -20,13 +22,11 @@ position = Vector2(255, 250)
 [node name="LevelTransition" parent="." unique_id=707893486 instance=ExtResource("4_4t7i1")]
 position = Vector2(256, 288)
 level = "uid://binds12sei8na"
-center_player = null
 side = 3
 
 [node name="LevelTransition2" parent="." unique_id=90656835 instance=ExtResource("4_4t7i1")]
 position = Vector2(480, 176)
 level = "uid://brw6a714vb8fu"
-center_player = null
 size = 3
 side = 1
 
