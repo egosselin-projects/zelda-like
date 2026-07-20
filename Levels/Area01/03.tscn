@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bo4t5bq4rpqyo" path="res://Levels/player_spawn.tscn" id="3_jvg0d"]
 [ext_resource type="PackedScene" uid="uid://digm86jdm4u7f" path="res://Levels/level_transition.tscn" id="4_ryupc"]
 [ext_resource type="PackedScene" uid="uid://c67cdu4vtjg2n" path="res://Props/Plants/Plant.tscn" id="5_jvg0d"]
-[ext_resource type="PackedScene" uid="uid://ch60g84mkc7gh" path="res://Enemies/Slime/slime.tscn" id="6_ut76y"]
+[ext_resource type="PackedScene" uid="uid://diqj3ab182tao" path="res://npc/npc.tscn" id="7_ut76y"]
+[ext_resource type="Resource" uid="uid://b3er0qnojyyv3" path="res://npc/00_npcs/npc_01.tres" id="8_crp14"]
+[ext_resource type="PackedScene" uid="uid://bs6xxl8eykppq" path="res://npc/npc_behavior_wander.tscn" id="8_gv52n"]
+[ext_resource type="Resource" uid="uid://c45k13h1ytp3n" path="res://npc/00_npcs/npc_02.tres" id="10_5waxo"]
 
 [node name="03" type="Node2D" unique_id=323601260]
 script = ExtResource("1_ryupc")
@@ -29,8 +32,17 @@ position = Vector2(432, 86)
 [node name="Plant2" parent="." unique_id=31561350 instance=ExtResource("5_jvg0d")]
 position = Vector2(432, 115)
 
-[node name="Slime" parent="." unique_id=1842516019 instance=ExtResource("6_ut76y")]
-position = Vector2(248, 328)
+[node name="NPC" parent="." unique_id=413644674 instance=ExtResource("7_ut76y")]
+position = Vector2(314, 271)
+npc_resource = ExtResource("8_crp14")
 
-[node name="Slime2" parent="." unique_id=1654678737 instance=ExtResource("6_ut76y")]
-position = Vector2(377, 240)
+[node name="NpcBehaviorWander" parent="NPC" unique_id=2146337644 instance=ExtResource("8_gv52n")]
+
+[node name="NPC2" parent="." unique_id=739431020 instance=ExtResource("7_ut76y")]
+position = Vector2(131, 273)
+npc_resource = ExtResource("10_5waxo")
+
+[node name="NpcBehaviorWander" parent="NPC2" unique_id=677846361 instance=ExtResource("8_gv52n")]
+position = Vector2(0, -1)
+wander_speed = 60.0
+wander_duration = 2.0
