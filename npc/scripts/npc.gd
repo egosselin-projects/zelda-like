@@ -46,7 +46,7 @@ func update_direction_name() -> void:
 		direction_name = "up"
 	elif direction.y > threshold:
 		direction_name = "down"
-	elif direction.y > threshold || direction.x < -threshold:
+	elif direction.x > threshold or direction.x < -threshold:
 		direction_name = "side"
 
 

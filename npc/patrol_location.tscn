@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dlrs1v0jqs25s"]
+
+[ext_resource type="Script" uid="uid://do027nn34j4yo" path="res://npc/scripts/patrol_location.gd" id="1_xdeq0"]
+
+[sub_resource type="Gradient" id="Gradient_ipyvv"]
+offsets = PackedFloat32Array(0.51046026, 0.7573222, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qpp62"]
+gradient = SubResource("Gradient_ipyvv")
+width = 24
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="PatrolLocation" type="Node2D" unique_id=1976760522]
+script = ExtResource("1_xdeq0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1695288660]
+self_modulate = Color(1, 1, 1, 0.49803922)
+texture = SubResource("GradientTexture2D_qpp62")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=145192005]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 10.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Sprite2D" unique_id=2049230922]
+offset_left = -23.0
+offset_top = 6.0
+offset_right = 23.0
+offset_bottom = 21.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 10
+text = "wait: 0.0s"
+horizontal_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="Sprite2D" unique_id=512707672]
+show_behind_parent = true
+points = PackedVector2Array(0, 0, 12, 0)
+width = 1.0

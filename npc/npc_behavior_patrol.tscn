@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dqejb75isak8f"]
+
+[ext_resource type="Script" uid="uid://neq64375bnxe" path="res://npc/scripts/npc_behavior_patrol.gd" id="1_pbuvt"]
+
+[node name="NpcBehaviorPatrol" type="Node2D" unique_id=1309442570]
+script = ExtResource("1_pbuvt")

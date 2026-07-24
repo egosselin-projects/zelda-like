@@ -10,6 +10,8 @@
 [ext_resource type="Resource" uid="uid://b3er0qnojyyv3" path="res://npc/00_npcs/npc_01.tres" id="8_crp14"]
 [ext_resource type="PackedScene" uid="uid://bs6xxl8eykppq" path="res://npc/npc_behavior_wander.tscn" id="8_gv52n"]
 [ext_resource type="Resource" uid="uid://c45k13h1ytp3n" path="res://npc/00_npcs/npc_02.tres" id="10_5waxo"]
+[ext_resource type="PackedScene" uid="uid://dqejb75isak8f" path="res://npc/npc_behavior_patrol.tscn" id="11_v72oj"]
+[ext_resource type="PackedScene" uid="uid://dlrs1v0jqs25s" path="res://npc/patrol_location.tscn" id="12_q54cq"]
 
 [node name="03" type="Node2D" unique_id=323601260]
 script = ExtResource("1_ryupc")
@@ -39,10 +41,30 @@ npc_resource = ExtResource("8_crp14")
 [node name="NpcBehaviorWander" parent="NPC" unique_id=2146337644 instance=ExtResource("8_gv52n")]
 
 [node name="NPC2" parent="." unique_id=739431020 instance=ExtResource("7_ut76y")]
-position = Vector2(131, 273)
+position = Vector2(139, 229)
 npc_resource = ExtResource("10_5waxo")
 
-[node name="NpcBehaviorWander" parent="NPC2" unique_id=677846361 instance=ExtResource("8_gv52n")]
-position = Vector2(0, -1)
-wander_speed = 60.0
-wander_duration = 2.0
+[node name="NpcBehaviorPatrol" parent="NPC2" unique_id=1309442570 instance=ExtResource("11_v72oj")]
+
+[node name="PatrolLocation" parent="NPC2/NpcBehaviorPatrol" unique_id=1976760522 instance=ExtResource("12_q54cq")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="PatrolLocation2" parent="NPC2/NpcBehaviorPatrol" unique_id=1870167507 instance=ExtResource("12_q54cq")]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(66, 0)
+wait_time = 1.0
+
+[node name="PatrolLocation3" parent="NPC2/NpcBehaviorPatrol" unique_id=320162442 instance=ExtResource("12_q54cq")]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(69, 91)
+wait_time = 1.0
+
+[node name="PatrolLocation4" parent="NPC2/NpcBehaviorPatrol" unique_id=1211512503 instance=ExtResource("12_q54cq")]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(20, 37)
+wait_time = 1.0
+
+[node name="PatrolLocation5" parent="NPC2/NpcBehaviorPatrol" unique_id=1792707685 instance=ExtResource("12_q54cq")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(-60, 90)
+wait_time = 1.0
