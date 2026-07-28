@@ -10,7 +10,10 @@
 [ext_resource type="Resource" uid="uid://b3er0qnojyyv3" path="res://npc/00_npcs/npc_01.tres" id="8_crp14"]
 [ext_resource type="PackedScene" uid="uid://bs6xxl8eykppq" path="res://npc/npc_behavior_wander.tscn" id="8_gv52n"]
 [ext_resource type="Resource" uid="uid://c45k13h1ytp3n" path="res://npc/00_npcs/npc_02.tres" id="10_5waxo"]
+[ext_resource type="PackedScene" uid="uid://cmqtx26qogn5s" path="res://Interactables/dialog/dialog_interaction.tscn" id="10_q54cq"]
+[ext_resource type="Script" uid="uid://cu0t2m3icypei" path="res://Interactables/dialog/scripts/dialog_text.gd" id="11_55lxj"]
 [ext_resource type="PackedScene" uid="uid://dqejb75isak8f" path="res://npc/npc_behavior_patrol.tscn" id="11_v72oj"]
+[ext_resource type="Resource" uid="uid://dhrpahpyudf21" path="res://npc/00_npcs/00_hero.tres" id="12_n7k4n"]
 [ext_resource type="PackedScene" uid="uid://dlrs1v0jqs25s" path="res://npc/patrol_location.tscn" id="12_q54cq"]
 
 [node name="03" type="Node2D" unique_id=323601260]
@@ -39,9 +42,32 @@ position = Vector2(314, 271)
 npc_resource = ExtResource("8_crp14")
 
 [node name="NpcBehaviorWander" parent="NPC" unique_id=2146337644 instance=ExtResource("8_gv52n")]
+wander_range = 1
+
+[node name="DialogInteraction" parent="NPC" unique_id=499065486 instance=ExtResource("10_q54cq")]
+
+[node name="DialogText" type="Node" parent="NPC/DialogInteraction" unique_id=631676814]
+script = ExtResource("11_55lxj")
+text = "Hi, are you the [b]Hero[/b] ?"
+npc_info = ExtResource("8_crp14")
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
+
+[node name="DialogText2" type="Node" parent="NPC/DialogInteraction" unique_id=151457573]
+script = ExtResource("11_55lxj")
+text = "
+[wave]Yes I am ![/wave]"
+npc_info = ExtResource("12_n7k4n")
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
+
+[node name="DialogText3" type="Node" parent="NPC/DialogInteraction" unique_id=1130802837]
+script = ExtResource("11_55lxj")
+text = "Cool
+Happy to have a hero around here !"
+npc_info = ExtResource("8_crp14")
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
 [node name="NPC2" parent="." unique_id=739431020 instance=ExtResource("7_ut76y")]
-position = Vector2(139, 229)
+position = Vector2(94, 238)
 npc_resource = ExtResource("10_5waxo")
 
 [node name="NpcBehaviorPatrol" parent="NPC2" unique_id=1309442570 instance=ExtResource("11_v72oj")]
@@ -51,20 +77,20 @@ modulate = Color(1, 0, 0, 1)
 
 [node name="PatrolLocation2" parent="NPC2/NpcBehaviorPatrol" unique_id=1870167507 instance=ExtResource("12_q54cq")]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(66, 0)
+position = Vector2(96, 0)
 wait_time = 1.0
 
 [node name="PatrolLocation3" parent="NPC2/NpcBehaviorPatrol" unique_id=320162442 instance=ExtResource("12_q54cq")]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(69, 91)
+position = Vector2(96, 90)
 wait_time = 1.0
 
 [node name="PatrolLocation4" parent="NPC2/NpcBehaviorPatrol" unique_id=1211512503 instance=ExtResource("12_q54cq")]
 modulate = Color(0, 1, 1, 1)
-position = Vector2(20, 37)
+position = Vector2(-2, 90)
 wait_time = 1.0
 
 [node name="PatrolLocation5" parent="NPC2/NpcBehaviorPatrol" unique_id=1792707685 instance=ExtResource("12_q54cq")]
 modulate = Color(0, 0, 1, 1)
-position = Vector2(-60, 90)
+position = Vector2(-40, 44)
 wait_time = 1.0

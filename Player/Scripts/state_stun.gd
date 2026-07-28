@@ -18,7 +18,7 @@ func init() -> void:
 
 # Entrée dans l'état
 func enter_state() -> void:
-	print("entrée état stun")
+	# print("entrée état stun")
 	player.animation_player.animation_finished.connect(_animation_finished)
 	
 	direction = player.global_position.direction_to(hurt_box.global_position)

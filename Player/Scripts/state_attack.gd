@@ -19,7 +19,7 @@ func _ready() -> void:
 
 # Entrée dans l'état
 func enter_state() -> void:
-	print("entrée état attaque")
+	# print("entrée état attaque")
 	player.update_animation("attack")
 	animation_player_attack.play("attack_" + player.animation_direction())
 	# Listener sur la fin de l'animation

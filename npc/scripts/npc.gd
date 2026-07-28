@@ -19,6 +19,8 @@ func _ready() -> void:
 	setup_npc()
 	if Engine.is_editor_hint():
 		return
+
+	gather_interactables()
 	do_behavior_enabled.emit()
 
 
@@ -59,3 +61,26 @@ func setup_npc() -> void:
 func _set_npc_resource(_npc: NPCResources) -> void:
 	npc_resource = _npc
 	setup_npc()
+
+
+func gather_interactables() -> void:
+	for child in get_children():
+		if child is DialogInteraction:
+			child.player_interacted.connect(_on_player_interacted)
+			child.finished.connect(_on_interaction_finished)
+		
+
+func _on_player_interacted() -> void:
+	update_direction(PlayerManager.player.global_position)
+	state = "idle"
+	velocity = Vector2.ZERO
+	update_animation()
+	do_behavior = false
+
+
+func _on_interaction_finished() -> void:
+	print("INTERACTION FINISHED !")
+	state = "idle"
+	update_animation()
+	do_behavior = true
+	do_behavior_enabled.emit()

@@ -140,7 +140,7 @@ theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("4_umqd7")
 text = "NAME"
 
-[node name="PotraitSprite" type="Sprite2D" parent="DialogUI" unique_id=472544236]
+[node name="PortraitSprite" type="Sprite2D" parent="DialogUI" unique_id=472544236]
 position = Vector2(51, 195)
 texture = ExtResource("5_dwuo2")
 hframes = 4

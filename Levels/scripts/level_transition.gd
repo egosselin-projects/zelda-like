@@ -27,15 +27,10 @@ enum SIDE {LEFT, RIGHT, TOP, BOTTOM}
 
 
 func _ready() -> void:
-	
-	print("LEVEL TRANSITION READY!")
-	
 	_update_area()
 	if Engine.is_editor_hint():
 		return
-	
-	print("BEFORE PLACE PLAYER!")
-	
+
 	monitoring = false
 	_place_player()
 

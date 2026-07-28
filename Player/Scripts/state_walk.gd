@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # Entrée dans l'état
 func enter_state() -> void:
-	print("entrée état marche")
+	# print("entrée état marche")
 	player.update_animation("walk")
 	pass
 

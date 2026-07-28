@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dlrs1v0jqs25s"]
 
 [ext_resource type="Script" uid="uid://do027nn34j4yo" path="res://npc/scripts/patrol_location.gd" id="1_xdeq0"]
+[ext_resource type="FontFile" uid="uid://mcwarq2x2bom" path="res://GUI/fonts/m5x7.ttf" id="2_rlkg0"]
 
 [sub_resource type="Gradient" id="Gradient_ipyvv"]
 offsets = PackedFloat32Array(0.51046026, 0.7573222, 1)
@@ -23,9 +24,9 @@ texture = SubResource("GradientTexture2D_qpp62")
 
 [node name="Label" type="Label" parent="Sprite2D" unique_id=145192005]
 offset_left = -13.0
-offset_top = -9.0
+offset_top = -5.0
 offset_right = 13.0
-offset_bottom = 10.0
+offset_bottom = 9.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_constants/paragraph_spacing = 1
@@ -36,16 +37,17 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Sprite2D" unique_id=2049230922]
-offset_left = -23.0
-offset_top = 6.0
-offset_right = 23.0
-offset_bottom = 21.0
+offset_left = -24.0
+offset_top = 8.0
+offset_right = 25.0
+offset_bottom = 23.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_constants/paragraph_spacing = 1
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 10
+theme_override_fonts/font = ExtResource("2_rlkg0")
+theme_override_font_sizes/font_size = 14
 text = "wait: 0.0s"
 horizontal_alignment = 1
 
