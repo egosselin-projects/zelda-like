@@ -38,3 +38,4 @@ side = 2
 
 [node name="Goblin" parent="." unique_id=1842516019 instance=ExtResource("5_pwydo")]
 position = Vector2(251, 79)
+hp = 1

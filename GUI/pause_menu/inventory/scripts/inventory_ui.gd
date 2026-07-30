@@ -20,13 +20,16 @@ func clear_inventory() -> void:
 
 
 func update_inventory(focused_index: int = 0) -> void:
+	
+	clear_inventory()
+	
 	for slot in data.slots:
 		var new_slot = INVENTORY_SLOT.instantiate()
 		add_child(new_slot)
 		new_slot.slot_data = slot
 		new_slot.focus_entered.connect(item_focused)
 	
-	#Mise à jour des eléments sélectionnés
+	# Mise à jour des eléments sélectionnés
 	await get_tree().process_frame
 	get_child(focused_index).grab_focus()
 
