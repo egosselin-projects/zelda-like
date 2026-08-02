@@ -43,6 +43,9 @@ func start() -> void:
 
 	await get_tree().create_timer(randf() * idle_duration + idle_duration * 0.5).timeout
 	
+	if not npc.do_behavior:
+		return
+	
 	# Phase marche
 	npc.state = "walk"
 	var _dir: Vector2 = DIRECTIONS[randi_range(0,3)]

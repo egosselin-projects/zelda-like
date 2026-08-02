@@ -48,21 +48,19 @@ wander_range = 1
 
 [node name="DialogText" type="Node" parent="NPC/DialogInteraction" unique_id=631676814]
 script = ExtResource("11_55lxj")
-text = "Hi, are you the [b]Hero[/b] ?"
+text = "Salut est-tu le [b]Hero[/b] de cette histoire ?"
 npc_info = ExtResource("8_crp14")
 metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
 [node name="DialogText2" type="Node" parent="NPC/DialogInteraction" unique_id=151457573]
 script = ExtResource("11_55lxj")
-text = "
-[wave]Yes I am ![/wave]"
+text = "[wave]Oui c'est moi ![/wave]"
 npc_info = ExtResource("12_n7k4n")
 metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
 [node name="DialogText3" type="Node" parent="NPC/DialogInteraction" unique_id=1130802837]
 script = ExtResource("11_55lxj")
-text = "Cool
-Happy to have a hero around here !"
+text = "Content que tu soit là ! A plus."
 npc_info = ExtResource("8_crp14")
 metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
@@ -94,3 +92,11 @@ wait_time = 1.0
 modulate = Color(0, 0, 1, 1)
 position = Vector2(-40, 44)
 wait_time = 1.0
+
+[node name="DialogInteraction" parent="NPC2" unique_id=140921293 instance=ExtResource("10_q54cq")]
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction" unique_id=1599141054]
+script = ExtResource("11_55lxj")
+text = "J'aime les cheeseburgers !!!"
+npc_info = ExtResource("10_5waxo")
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
