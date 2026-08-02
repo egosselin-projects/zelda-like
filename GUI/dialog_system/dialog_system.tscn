@@ -5,7 +5,9 @@
 [ext_resource type="FontFile" uid="uid://bkdh04t8gndej" path="res://GUI/fonts/Abaddon Light.ttf" id="3_dwuo2"]
 [ext_resource type="FontFile" uid="uid://np6ibxb0rx0r" path="res://GUI/fonts/Abaddon Bold.ttf" id="4_umqd7"]
 [ext_resource type="Texture2D" uid="uid://yl0einoa6g07" path="res://npc/sprites/portraits/npc_portrait_01.png" id="5_dwuo2"]
+[ext_resource type="AudioStream" uid="uid://tqj3og88wv3u" path="res://GUI/dialog_system/audio/voice_blip.wav" id="6_8tyrm"]
 [ext_resource type="FontFile" uid="uid://mcwarq2x2bom" path="res://GUI/fonts/m5x7.ttf" id="6_umqd7"]
+[ext_resource type="Script" uid="uid://3u2safn7iau1" path="res://GUI/dialog_system/scripts/dialog_portait.gd" id="6_vyuf5"]
 
 [sub_resource type="Gradient" id="Gradient_5yhxf"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -144,10 +146,15 @@ text = "NAME"
 position = Vector2(51, 195)
 texture = ExtResource("5_dwuo2")
 hframes = 4
+script = ExtResource("6_vyuf5")
 
 [node name="Timer" type="Timer" parent="DialogUI" unique_id=1131894273]
+one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogUI" unique_id=851425547]
+stream = ExtResource("6_8tyrm")
+max_polyphony = 6
+bus = &"SFX"
 
 [node name="DialogProgressIndicator" type="PanelContainer" parent="DialogUI" unique_id=946694534]
 self_modulate = Color(0, 0.70387197, 0, 1)
