@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://dqejb75isak8f" path="res://npc/npc_behavior_patrol.tscn" id="11_v72oj"]
 [ext_resource type="Resource" uid="uid://dhrpahpyudf21" path="res://npc/00_npcs/00_hero.tres" id="12_n7k4n"]
 [ext_resource type="PackedScene" uid="uid://dlrs1v0jqs25s" path="res://npc/patrol_location.tscn" id="12_q54cq"]
+[ext_resource type="Script" uid="uid://cbdds6r4jprln" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="16_ok2uc"]
+[ext_resource type="Script" uid="uid://re7fqlwdah55" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="17_a033e"]
 
 [node name="03" type="Node2D" unique_id=323601260]
 script = ExtResource("1_ryupc")
@@ -97,6 +99,37 @@ wait_time = 1.0
 
 [node name="DialogText" type="Node" parent="NPC2/DialogInteraction" unique_id=1599141054]
 script = ExtResource("11_55lxj")
-text = "J'aime les cheeseburgers !!!"
+text = "Bonjour [b]aventurier[/b].
+J'ai perdu ma flute magique dans le donjon."
 npc_info = ExtResource("10_5waxo")
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
+
+[node name="DialogText2" type="Node" parent="NPC2/DialogInteraction" unique_id=442040928]
+script = ExtResource("11_55lxj")
+text = "Retrouve-la et je te donnerai 100 balles et un Mars. "
+npc_info = ExtResource("10_5waxo")
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
+
+[node name="DialogChoice" type="Node" parent="NPC2/DialogInteraction" unique_id=854591457]
+script = ExtResource("16_ok2uc")
+metadata/_custom_type_script = "uid://cbdds6r4jprln"
+
+[node name="DialogBranch" type="Node" parent="NPC2/DialogInteraction/DialogChoice" unique_id=1409486483]
+script = ExtResource("17_a033e")
+text = "D'accord"
+metadata/_custom_type_script = "uid://re7fqlwdah55"
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch" unique_id=2031858556]
+script = ExtResource("11_55lxj")
+text = "Merci [b]aventurier[/b] fait [wave]vite[/wave] !"
+metadata/_custom_type_script = "uid://cu0t2m3icypei"
+
+[node name="DialogBranch2" type="Node" parent="NPC2/DialogInteraction/DialogChoice" unique_id=913857424]
+script = ExtResource("17_a033e")
+text = "Non débrouille toi !"
+metadata/_custom_type_script = "uid://re7fqlwdah55"
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch2" unique_id=737392022]
+script = ExtResource("11_55lxj")
+text = "Et ta soeur, elle boit l'eau des pates !"
 metadata/_custom_type_script = "uid://cu0t2m3icypei"

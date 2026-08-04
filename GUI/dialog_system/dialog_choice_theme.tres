@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://od8namme7oxq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idolx"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+bg_color = Color(0, 0, 0, 0.6784314)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[resource]
+Button/colors/font_color = Color(0.89411765, 0.8627451, 0.79607844, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_idolx")
+Button/styles/hover = SubResource("StyleBoxFlat_idolx")
+Button/styles/normal = SubResource("StyleBoxFlat_idolx")
+Button/styles/pressed = SubResource("StyleBoxFlat_idolx")
+VBoxContainer/constants/separation = 6

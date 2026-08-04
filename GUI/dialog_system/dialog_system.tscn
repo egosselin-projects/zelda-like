@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://tqj3og88wv3u" path="res://GUI/dialog_system/audio/voice_blip.wav" id="6_8tyrm"]
 [ext_resource type="FontFile" uid="uid://mcwarq2x2bom" path="res://GUI/fonts/m5x7.ttf" id="6_umqd7"]
 [ext_resource type="Script" uid="uid://3u2safn7iau1" path="res://GUI/dialog_system/scripts/dialog_portait.gd" id="6_vyuf5"]
+[ext_resource type="Theme" uid="uid://od8namme7oxq" path="res://GUI/dialog_system/dialog_choice_theme.tres" id="9_onhof"]
 
 [sub_resource type="Gradient" id="Gradient_5yhxf"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -79,7 +80,7 @@ _data = {
 
 [node name="DialogSystem" type="CanvasLayer" unique_id=1501911403]
 process_mode = 3
-layer = 0
+layer = 3
 script = ExtResource("1_5yhxf")
 
 [node name="DialogUI" type="Control" parent="." unique_id=1043677346]
@@ -175,3 +176,44 @@ vertical_alignment = 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogProgressIndicator" unique_id=2061632316]
 libraries/ = SubResource("AnimationLibrary_vyuf5")
 autoplay = &"default"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogUI" unique_id=1958960591]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -110.0
+offset_right = 186.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_onhof")
+alignment = 1
+
+[node name="Button" type="Button" parent="DialogUI/VBoxContainer" unique_id=1899727019]
+layout_mode = 2
+theme = ExtResource("9_onhof")
+text = "Choice 1"
+
+[node name="Button2" type="Button" parent="DialogUI/VBoxContainer" unique_id=131563510]
+layout_mode = 2
+theme = ExtResource("9_onhof")
+text = "Choice 1"
+
+[node name="Button3" type="Button" parent="DialogUI/VBoxContainer" unique_id=1681915704]
+layout_mode = 2
+theme = ExtResource("9_onhof")
+text = "Choice 1"
+
+[node name="Button4" type="Button" parent="DialogUI/VBoxContainer" unique_id=1353422866]
+layout_mode = 2
+theme = ExtResource("9_onhof")
+text = "Choice 1"
+
+[node name="Button5" type="Button" parent="DialogUI/VBoxContainer" unique_id=1430696422]
+layout_mode = 2
+theme = ExtResource("9_onhof")
+text = "Choice 1"
