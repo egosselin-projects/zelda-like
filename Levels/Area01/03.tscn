@@ -99,14 +99,15 @@ wait_time = 1.0
 
 [node name="DialogText" type="Node" parent="NPC2/DialogInteraction" unique_id=1599141054]
 script = ExtResource("11_55lxj")
-text = "Bonjour [b]aventurier[/b].
-J'ai perdu ma flute magique dans le donjon."
+text = "Bonjour [b]aventurier[/b] [shake]![/shake]
+J'ai perdu ma flute magique dans le donjon.
+Aide moi, s't'eu plait !"
 npc_info = ExtResource("10_5waxo")
 metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
 [node name="DialogText2" type="Node" parent="NPC2/DialogInteraction" unique_id=442040928]
 script = ExtResource("11_55lxj")
-text = "Retrouve-la et je te donnerai 100 balles et un Mars. "
+text = "Retrouve-la et je te donnerai 100 balles et un Mars !"
 npc_info = ExtResource("10_5waxo")
 metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
@@ -116,7 +117,7 @@ metadata/_custom_type_script = "uid://cbdds6r4jprln"
 
 [node name="DialogBranch" type="Node" parent="NPC2/DialogInteraction/DialogChoice" unique_id=1409486483]
 script = ExtResource("17_a033e")
-text = "D'accord"
+text = "D'accord !"
 metadata/_custom_type_script = "uid://re7fqlwdah55"
 
 [node name="DialogText" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch" unique_id=2031858556]
@@ -126,7 +127,7 @@ metadata/_custom_type_script = "uid://cu0t2m3icypei"
 
 [node name="DialogBranch2" type="Node" parent="NPC2/DialogInteraction/DialogChoice" unique_id=913857424]
 script = ExtResource("17_a033e")
-text = "Non débrouille toi !"
+text = "Non débrouille toi, lol"
 metadata/_custom_type_script = "uid://re7fqlwdah55"
 
 [node name="DialogText" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch2" unique_id=737392022]

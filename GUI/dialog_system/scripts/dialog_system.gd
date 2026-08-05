@@ -130,6 +130,8 @@ func show_dialog_button_indicator(_is_visible: bool) -> void:
 
 func set_dialog_text(_dialog_item: DialogText) -> void:
 	content.text = _dialog_item.text
+	choice_options.visible = false
+
 	if _dialog_item.npc_info:
 		name_label.text = _dialog_item.npc_info.npc_name
 		portrait_sprite.texture = _dialog_item.npc_info.portrait
@@ -158,6 +160,9 @@ func set_dialog_choice(_dialog_item: DialogChoice) -> void:
 			_dialog_item.dialog_branches[index]
 		))
 		choice_options.add_child(_new_choice)
+
+	if Engine.is_editor_hint():
+		return
 
 	await get_tree().process_frame
 	choice_options.get_child(0).grab_focus()
